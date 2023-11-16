@@ -2,14 +2,17 @@
 
 ## Stack
 Golang version 1.19
+
 Framework go gin
+
 Database MySQL 8.0
+
 
 ## Getting started
 
 ### Environment Variables
 
-Create a `.env` file in the root Peppermint directory and copy the default values from the `.env.template` file
+Create a `.env` file in the root demo directory and copy the default values from the `.env.template` file
 
 ```shell script
 cp .env.template .env
