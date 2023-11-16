@@ -1,0 +1,11 @@
+service:
+  host: "0.0.0.0"
+  port: "8080"
+
+database:
+  username: $MYSQL_USERNAME
+  password: $MYSQL_PASSWORD
+  hostname: $MYSQL_HOSTNAME
+  dbname: $MYSQL_DBNAME
+
+localDevelopment: $IS_LOCAL_DEVELOPMENT
