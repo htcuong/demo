@@ -43,7 +43,7 @@ func (h *BuyHandler) BuyWager(c *gin.Context) {
 	}
 
 	var body model.BuyWagerBody
-	c.Bind(&body)
+	c.ShouldBind(&body)
 	err = h.validate.Struct(body)
 	if err != nil {
 		c.Header("error", err.Error())

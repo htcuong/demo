@@ -36,7 +36,7 @@ func NewWagerHandler(db *sql.DB, logger *log.Logger) IWagerHandler {
 
 func (h *WagerHandler) CreateWager(c *gin.Context) {
 	var body model.CreateWagerBody
-	c.Bind(&body)
+	c.ShouldBind(&body)
 	err := h.validate.Struct(body)
 	if err != nil {
 		c.Header("error", err.Error())
@@ -59,7 +59,7 @@ func (h *WagerHandler) CreateWager(c *gin.Context) {
 
 func (h *WagerHandler) GetListWager(c *gin.Context) {
 	var query model.ListWagerQueryString
-	c.BindQuery(&query)
+	c.ShouldBind(&query)
 
 	err := h.validate.Struct(query)
 	if err != nil {

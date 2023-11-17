@@ -21,7 +21,7 @@ func NewServerCmd(configs *config.Configurations, logger *log.Logger) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "api",
 		Short: "run api server",
-		Long:  "run api server with graphql",
+		Long:  "run api server with rest api",
 		Run: func(cmd *cobra.Command, args []string) {
 			// generate new logger with package name
 			logger = log.FromLogger(logger, log.PackageName("cmd/server"))
